@@ -34,6 +34,8 @@ namespace EventsDelegates
 
             netflix.NewMovie("Witcher 2", new DateTime(2021, 12, 17), "netflix.com/Witcher%202");
             sweetTV.NewMovie("Love and pigeons", new DateTime(2021, 12, 17), "sweet-tv.com/Love%20and%20pigeons");
+
+            Console.ReadKey();
         }
     }
 }
