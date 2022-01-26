@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kostiantyn_s\\Desktop\\Projects\\EventsDelegates\\EventsDelegates\\EventsDelegates.csproj": {}
+    "C:\\Users\\kostiantyn_s\\Desktop\\Projects\\EventsAndDelegates\\EventsDelegates\\EventsDelegates.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kostiantyn_s\\Desktop\\Projects\\EventsDelegates\\EventsDelegates\\EventsDelegates.csproj": {
+    "C:\\Users\\kostiantyn_s\\Desktop\\Projects\\EventsAndDelegates\\EventsDelegates\\EventsDelegates.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kostiantyn_s\\Desktop\\Projects\\EventsDelegates\\EventsDelegates\\EventsDelegates.csproj",
+        "projectUniqueName": "C:\\Users\\kostiantyn_s\\Desktop\\Projects\\EventsAndDelegates\\EventsDelegates\\EventsDelegates.csproj",
         "projectName": "EventsDelegates",
-        "projectPath": "C:\\Users\\kostiantyn_s\\Desktop\\Projects\\EventsDelegates\\EventsDelegates\\EventsDelegates.csproj",
+        "projectPath": "C:\\Users\\kostiantyn_s\\Desktop\\Projects\\EventsAndDelegates\\EventsDelegates\\EventsDelegates.csproj",
         "packagesPath": "C:\\Users\\kostiantyn_s\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kostiantyn_s\\Desktop\\Projects\\EventsDelegates\\EventsDelegates\\obj\\",
+        "outputPath": "C:\\Users\\kostiantyn_s\\Desktop\\Projects\\EventsAndDelegates\\EventsDelegates\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kostiantyn_s\\AppData\\Roaming\\NuGet\\NuGet.Config",
