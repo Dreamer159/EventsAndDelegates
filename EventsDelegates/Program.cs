@@ -17,10 +17,10 @@ namespace EventsDelegates
                 Title = "Sweet TV",
                 Link = "sweet-tv.com",
             };
-            TvShowViewer kostya = new TvShowViewer() { Name = "Kostya" };
-            TvShowViewer lena = new TvShowViewer() { Name = "Lena" };
-            TvShowViewer olya = new TvShowViewer() { Name = "Olya" };
-            TvShowViewer anon = new TvShowViewer() { Name = "Anon" };
+            TvShowViewer kostya = new TvShowViewer("Kostya");
+            TvShowViewer lena = new TvShowViewer("Lena");
+            TvShowViewer olya = new TvShowViewer("Olya");
+            TvShowViewer anon = new TvShowViewer("Anon");
 
             netflix.Subscribe(kostya);
             netflix.Subscribe(lena);
