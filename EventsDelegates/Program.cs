@@ -22,13 +22,22 @@ namespace EventsDelegates
             TvShowViewer olya = new TvShowViewer("Olya");
             TvShowViewer anon = new TvShowViewer("Anon");
 
-            netflix.Subscribe(kostya);
-            netflix.Subscribe(lena);
-            netflix.Subscribe(olya);
-            netflix.Subscribe(anon);
+            /*kostya.Subscribe(netflix);
+            kostya.Subscribe(sweetTV);
+            lena.Subscribe(netflix);
+            olya.Subscribe(netflix);
+            anon.Subscribe(netflix);
+            anon.Subscribe(sweetTV);
 
-            sweetTV.Subscribe(kostya);
-            sweetTV.Subscribe(anon);
+            anon.Unsubscribe(netflix);*/
+
+            netflix.Subscribe(kostya.viewerDelegate);
+            netflix.Subscribe(olya.viewerDelegate);
+            netflix.Subscribe(anon.viewerDelegate);
+            netflix.Subscribe(lena.viewerDelegate);
+
+            sweetTV.Subscribe(kostya.viewerDelegate);
+            sweetTV.Subscribe(anon.viewerDelegate);
 
             netflix.Unsubscribe(anon);
 

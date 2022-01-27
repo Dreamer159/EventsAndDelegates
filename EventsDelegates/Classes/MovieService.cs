@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace EventsDelegates.Classes
 {
-    public delegate void MovieServiceHandler(Movie movie);
+    public delegate void NewMovieHandler(Movie movie);
     public class MovieService
     {
-        public event MovieServiceHandler AddedMovie;
+        public event NewMovieHandler AddedMovie;
         public string Title { get; set; }
         public string Link { get; set; }
-        public IEnumerable<Movie> Movies { get; set; } = new List<Movie>();
+        private IEnumerable<Movie> Movies { get; set; } = new List<Movie>();
 
         public void NewMovie(string title, DateTime date, string link)
         {
@@ -24,11 +24,23 @@ namespace EventsDelegates.Classes
             };
             Movies.Append(movie);
             AddedMovie?.Invoke(movie);
+            //AddedMovie?.BeginInvoke(movie,callback,this);
+            /*foreach (var del in AddedMovie.GetInvocationList())
+            {
+                try
+                {
+                    del.DynamicInvoke(movie);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+            }*/
             Console.WriteLine();
         }
-        public void Subscribe(TvShowViewer viewer)
+        public void Subscribe(NewMovieHandler handler)
         {
-            AddedMovie += viewer.MovieNotification;
+            AddedMovie += handler;
         }
         public void Unsubscribe(TvShowViewer viewer)
         {
