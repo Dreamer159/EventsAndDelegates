@@ -22,26 +22,20 @@ namespace EventsDelegates
             TvShowViewer olya = new TvShowViewer("Olya");
             TvShowViewer anon = new TvShowViewer("Anon");
 
-            /*kostya.Subscribe(netflix);
-            kostya.Subscribe(sweetTV);
+            netflix.AddedMovie += kostya.MovieNotification;
+            netflix.Subscribe(olya.viewerDelegate);
             lena.Subscribe(netflix);
-            olya.Subscribe(netflix);
-            anon.Subscribe(netflix);
             anon.Subscribe(sweetTV);
 
-            anon.Unsubscribe(netflix);*/
-
-            netflix.Subscribe(kostya.viewerDelegate);
-            netflix.Subscribe(olya.viewerDelegate);
-            netflix.Subscribe(anon.viewerDelegate);
-            netflix.Subscribe(lena.viewerDelegate);
-
             sweetTV.Subscribe(kostya.viewerDelegate);
-            sweetTV.Subscribe(anon.viewerDelegate);
+            anon.Subscribe(sweetTV);
 
-            netflix.Unsubscribe(anon);
+            anon.Unsubscribe(netflix);
 
+            Console.WriteLine("Adding new movie to Netflix");
             netflix.NewMovie("Witcher 2", new DateTime(2021, 12, 17), "netflix.com/Witcher%202");
+            Console.WriteLine();
+            Console.WriteLine("Adding new movie to Sweet TV");
             sweetTV.NewMovie("Love and pigeons", new DateTime(2021, 12, 17), "sweet-tv.com/Love%20and%20pigeons");
 
             Console.ReadKey();

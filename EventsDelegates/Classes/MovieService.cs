@@ -9,6 +9,7 @@ namespace EventsDelegates.Classes
     public delegate void NewMovieHandler(Movie movie);
     public class MovieService
     {
+        public event EventHandler<Movie> AddedMovieEventHandler;
         public event NewMovieHandler AddedMovie;
         public string Title { get; set; }
         public string Link { get; set; }
@@ -23,8 +24,10 @@ namespace EventsDelegates.Classes
                 Link = link,
             };
             Movies.Append(movie);
-            AddedMovie?.Invoke(movie);
-            //AddedMovie?.BeginInvoke(movie,callback,this);
+            Console.WriteLine("Custom event");
+            if(AddedMovie != null)
+                AddedMovie(movie);
+            //AddedMovie?.BeginInvoke(movie, null, this);
             /*foreach (var del in AddedMovie.GetInvocationList())
             {
                 try
@@ -37,14 +40,19 @@ namespace EventsDelegates.Classes
                 }
             }*/
             Console.WriteLine();
+            Console.WriteLine("Event<EventHandler>");
+            EventHandler<Movie> handler = AddedMovieEventHandler;
+            handler?.Invoke(this, movie);
+            Console.WriteLine();
         }
+
         public void Subscribe(NewMovieHandler handler)
         {
             AddedMovie += handler;
         }
-        public void Unsubscribe(TvShowViewer viewer)
+        public void Unsubscribe(NewMovieHandler handler)
         {
-            AddedMovie -= viewer.MovieNotification;
+            AddedMovie -= handler;
         }
     }
 }

@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\EventsDelegates"
   ],
-  "SelectedNode": "\\EventsDelegates.sln",
+  "SelectedNode": "\\EventsDelegates\\Program.cs",
   "PreviewInSolutionExplorer": false
 }
