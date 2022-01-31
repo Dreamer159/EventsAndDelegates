@@ -23,9 +23,9 @@ namespace EventsDelegates
             TvShowViewer anon = new TvShowViewer("Anon");
 
             netflix.AddedMovie += kostya.MovieNotification;
+            netflix.AddedMovieEventHandler += kostya.MovieNotificationWithArgs;
             netflix.Subscribe(olya.viewerDelegate);
             lena.Subscribe(netflix);
-            anon.Subscribe(sweetTV);
 
             sweetTV.Subscribe(kostya.viewerDelegate);
             anon.Subscribe(sweetTV);

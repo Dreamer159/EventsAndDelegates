@@ -27,18 +27,6 @@ namespace EventsDelegates.Classes
             Console.WriteLine("Custom event");
             if(AddedMovie != null)
                 AddedMovie(movie);
-            //AddedMovie?.BeginInvoke(movie, null, this);
-            /*foreach (var del in AddedMovie.GetInvocationList())
-            {
-                try
-                {
-                    del.DynamicInvoke(movie);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-            }*/
             Console.WriteLine();
             Console.WriteLine("Event<EventHandler>");
             EventHandler<Movie> handler = AddedMovieEventHandler;

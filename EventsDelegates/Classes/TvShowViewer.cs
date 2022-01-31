@@ -17,8 +17,6 @@ namespace EventsDelegates.Classes
         }
         public void MovieNotification(Movie movie)
         {
-            //id потока в котором вызвался метод
-            //Thread thread = Thread.CurrentThread;
             Console.WriteLine($"Hello, {Name}! {movie.ReleaseDate} we release movie: '{movie.Title}', go to {movie.Link} to see more details.");
         }
 
@@ -34,8 +32,8 @@ namespace EventsDelegates.Classes
         }
         public void Unsubscribe(MovieService movieService)
         {
-            movieService.AddedMovie += MovieNotification;
-            movieService.AddedMovieEventHandler += MovieNotificationWithArgs;
+            movieService.AddedMovie -= MovieNotification;
+            movieService.AddedMovieEventHandler -= MovieNotificationWithArgs;
         }
     }
 }
