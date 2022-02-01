@@ -33,9 +33,6 @@ namespace EventsDelegates.Classes
             EventHandler<Movie> handler = AddedMovieEventHandler;
             handler?.Invoke(this, movie);
             Console.WriteLine();
-            foreach(Movie movie in Movies)
-
-                AddedMovie.DynamicInvoke
         }
 
         //subscribe viewer using custom event and delegate
